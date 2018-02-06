@@ -48,7 +48,7 @@ if (self.fetch) {
                     }
                 }
                 //Sort the array in descending order of predominance.
-                repo_langs.sort((a, b) => b - a);
+                repo_langs.sort((a, b) => b.amount - a.amount);
                 var repo_body = document.getElementById(repo.toLowerCase());
                 repo_langs.forEach(function (repo_lang) {
                     //Create bars for each language
