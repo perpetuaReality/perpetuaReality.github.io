@@ -2,6 +2,7 @@
 /* CSS Document */
 @import url('https://fonts.googleapis.com/css?family=Fira+Mono');
 @import url('https://fonts.googleapis.com/css?family=Amaranth');
+@import url('https://fonts.googleapis.com/css?family=Lato');
 @import url("https://use.typekit.net/bmh0ger.css");
 
 body {
@@ -40,6 +41,26 @@ body {
         border-color: white;
     }
 
+.github_btn {
+    text-align: center;
+    padding: 7px;
+    color: rgba(220, 220, 220, 1);
+    background: rgba(36, 41, 46, 1);
+    border-radius: 3px;
+    border: 2px solid rgba(63, 68, 72, 1);
+    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
+    transition: color 0.5s, border-color 0.5s, background-color 0.5s;
+    z-index: 50;
+}
+
+    .github_btn:hover {
+        color: white;
+        background-color: rgba(63, 68, 72, 1);
+        border-color: white;
+    }
+    
 #container {
     position: fixed;
     background-color: rgb(6, 41, 56);

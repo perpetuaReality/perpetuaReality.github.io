@@ -1,5 +1,57 @@
-﻿#clipboard .repo_body {
+﻿#courtney .repo_body {
+	background: rgb(179,48,190); /* Old browsers */
+	background: -moz-linear-gradient(top, rgb(179,48,190) 0%, rgb(118,21,143) 100%); /* FF3.6-15 */
+	background: -webkit-linear-gradient(top, rgb(179,48,190) 0%,rgb(118,21,143) 100%); /* Chrome10-25,Safari5.1-6 */
+	background: linear-gradient(to bottom, rgb(179,48,190) 0%,rgb(118,21,143) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b330be', endColorstr='#76158f',GradientType=0 ); /* IE6-9 */
+    
+    border-left: 2px solid rgb(238, 111, 255);
+    border-right: 2px solid rgb(238, 111, 255);
+    color: white;
+}
+
+    #courtney .repo_title {
+        padding: 7px 3px 3px 3px;
+    }
+
+    #courtney .repo_title a {
+        text-decoration: white;
+    }
+
+    #courtney .repo_desc {
+        padding: 7px;
+    }
+
+    #courtney h2 {
+        color: white;
+        margin: 0;
+        font-size: 38px;
+        font-weight: bolder;
+        font-family: 'Lato', serif;
+    }
+
+    #courtney p {
+        margin: 0px;
+        margin-bottom: 7px;
+    }
+
+#courtney .lang_title {
+    margin-top: 7px;
+    padding-top: 10px;
+}
+
+#courtney_icon {
+    border-radius: 50%;
+    margin-right: 15px;
+    vertical-align: middle;
+}
+
+#clipboard .repo_body {
     background-color: white;
+    -moz-animation-delay: 1s;
+    -o-animation-delay: 1s;
+    -webkit-animation-delay: 1s;
+    animation-delay: 1s;
     border-left: 2px solid #636363;
     border-right: 2px solid #636363;
 }
@@ -32,10 +84,10 @@
 
 #scoreboard .repo_body {
     position:relative;
-    -moz-animation-delay: 1s;
-    -o-animation-delay: 1s;
-    -webkit-animation-delay: 1s;
-    animation-delay: 1s;
+    -moz-animation-delay: 1.5s;
+    -o-animation-delay: 1.5s;
+    -webkit-animation-delay: 1.5s;
+    animation-delay: 1.5s;
     background-image: -moz-linear-gradient(top, white, #dddddd);
     background-image: -o-linear-gradient(top, white, #dddddd);
     background-image: -webkit-gradient(linear, top bottom, from(white), to(#dddddd));

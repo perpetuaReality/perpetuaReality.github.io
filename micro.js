@@ -25,7 +25,7 @@ txtFile.open("GET", "lang.xml", false);
 txtFile.send(null);
 var langs = txtFile.responseXML.firstElementChild.children;
 
-var repo_names = ["Clipboard", "Scoreboard"];
+var repo_names = ["Courtney", "Clipboard", "Scoreboard"];
 repo_names.push("perpetuaReality.github.io"); //The website's repository.
 
 if (self.fetch) {
