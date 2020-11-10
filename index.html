@@ -1,101 +1,92 @@
-﻿<!doctype html>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <style>
-        html {
-            --repo_body_width: 400px;
-        }
-    </style>
-    <link href="style.css" type="text/css" rel="stylesheet">
-    <link href="repo_styles.css" type="text/css" rel="stylesheet">
-    <title>perpetuaReality — Coding</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>perpetuaReality - Coding</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <button onclick="window.location.href = 'https://github.com/perpetuaReality';" id="github">View GitHub Profile</button>
-    <div id="lang_tooltip">
-        <span id="lang_colourdot"></span> <span id="lang_info">Language: any%</span>
+    <a href="https://www.perpetuareality.com" target="_blank"><img id="logo" src="https://www.perpetuareality.com/img/logo_black_line.png"/></a>
+
+    <div id="wrapper">
+        <nav>
+            <h2>
+                <a href="https://github.com/perpetuaReality" target="_blank">Github</a> || 
+                <a href="https://perpetuareality.itch.io" target="_blank">Itch.io</a> || 
+                <a href="https://ldjam.com/users/perpetuareality/" target="_blank">Ludum Dare</a>
+            </h2>
+        </nav>
+
+        <h1>Games</h1>
+        <div class="proj">
+            <div class="proj_image">
+                <img src="https://static.jam.vg/content/9f4/73/z/3726b.png.480x384.fit.jpg"/>
+            </div>
+            <div>
+                <h2>Parallel Spin</h2>
+                <h3>
+                    <a href="https://ldjam.com/events/ludum-dare/47/parallel-spin" target="_blank">Ludum Dare &gt;&gt;</a> ||
+                    <a href="https://perpetuareality.com/code-projects/parallel-spin/" target="_blank">Play &gt;&gt;</a>
+                </h3>
+                <i>Made for <a href="https://ldjam.com/events/ludum-dare/47" target="_blank">Ludum Dare 47</a> in around 48 hours!</i><br/>
+                <span style="color: rgb(118, 161, 255);">Blue</span> is you. If you touch <span style="color: rgb(255, 118, 118);">Red</span>, you lose. You can only spin in preset levels, jump between levels, and change the way you spin.<br/>
+                Each movement you take spends energy. (Green gives you more energy! But use it wisely.)<br/>
+                How long can you stay in the game for?
+            </div>
+        </div>
+        
+        <div class="proj">
+            <div class="proj_image">
+                <img src="https://img.itch.zone/aW1nLzQxNTgyNzMucG5n/315x250%23c/Gys20R.png"/>
+            </div>
+            <div>
+                <h2>PS: Post Snake</h2>
+                <h3>
+                    <a href="https://perpetuareality.itch.io/post-snake" target="_blank">Itch.io &gt;&gt;</a>
+                </h3>
+                <i>Originally made for the <a href="https://itch.io/jam/extra-credits-game-jam-6" target="_blank">Extra Credits Game Jam 6</a>! (Did not finish)</i><br/>
+                Control your snake and weave your way in and around a little town while you deliver the mail to the people in these times of need. Time only passes when you move, so think ahead!
+            </div>
+        </div>
+        
+        <div class="proj">
+            <div class="proj_image">
+                <div class="missing">�</div>
+            </div>
+            <div>
+                <h2>PointSource</h2>
+                <h3>
+                    ???
+                </h3>
+                [ Coming soon ]
+            </div>
+        </div>
+
+
+
+        <h1>Bots</h1>
+        <div class="proj">
+            <div class="proj_image">
+                <img src="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FPORTRAIT.png?1542147021136"/>
+            </div>
+            <div>
+                <h2>Courtney</h2>
+                <h3>
+                    <a href="https://courtney.glitch.me/" target="_blank">Project page &gt;&gt;</a> ||
+                    <a href="https://github.com/perpetuaReality/Courtney" target="_blank">Github repository &gt;&gt;</a>
+                </h3>
+                <i>Verified Discord bot!</i><br/>
+                [Development in Hiatus]<br/>
+                A Discord bot for tracking character HP! For use in roleplaying scenarios!
+            </div>
+        </div>
+
+
+
+        <h1>Gadgets</h1>
+        <h2>+ <a href="https://perpetuareality.com/code-projects/poggers/" target="_blank">Infinite Poggers &gt;&gt;</a></h2>
+        <h2>+ <a href="https://coding.perpetuareality.com/Scoreboardv2/" target="_blank">Scoreboard &gt;&gt;</a></h2>
     </div>
-    <div id="container">
-        <div class="repo_decoheader">
-            <span>&lt;</span>project<span>&gt;</span>
-        </div>
-        <div id="header">
-            <img src="logo.svg" alt="perpetuaReality" />
-            <h1><span id="subtitle"><noscript>&lt;coding&gt;</noscript></span><span id="caret">&#9615;</span></h1>
-        </div>
-
-        <div id="repositories">
-            <div class="repository" id="courtney">
-                <div class="repo_decoheader">
-                    <span>&lt;</span>project<span>&gt;</span>
-                </div>
-                <div class="repo_body">
-                    <div class="repo_title">
-                        <a href="https://courtney.glitch.me" title="Visit Courtney's website"><h2><img src="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FICON.png?1538727260231" id="courtney_icon" height="50" width="50"/>Courtney</h2></a>
-                    </div>
-                    <div class="repo_desc">
-                        <p>A Discord bot for tracking Character HP's!</p>
-                    </div>
-                    <a href="https://github.com/perpetuaReality/Courtney" class="github_btn">View GitHub Repository</a>
-                    <div class="lang_title">
-                        <b>Language details</b> (hover over for more)<b>:</b>
-                    </div>
-                    <div class="lang_details"><noscript>[Javascript required to fetch details.]</noscript></div>
-                </div>
-                <div class="repo_decofooter">
-                    <span>&lt;/</span>project<span>&gt;</span>
-                </div>
-            </div>
-
-            <div class="repository" id="clipboard">
-                <div class="repo_decoheader">
-                    <span>&lt;</span>project<span>&gt;</span>
-                </div>
-                <div class="repo_body">
-                    <div class="repo_title">
-                        <a href="https://perpetuareality.github.io/Clipboard/" title="See live on GitHub Pages"><h2>📋 Clipboard ⌨️</h2></a>
-                    </div>
-                    <div class="repo_desc">
-                        <p>A simple clipboard. Contains an self-generating, offline-capable emoji keyboard.</p>
-                        <p>Launch, click, and get them copied into your computer's clipboard.</p>
-                    </div>
-                    <div class="lang_title">
-                        <b>Language details</b> (hover over for more)<b>:</b>
-                    </div>
-                    <div class="lang_details"><noscript>[Javascript required to fetch details.]</noscript></div>
-                </div>
-                <div class="repo_decofooter">
-                    <span>&lt;/</span>project<span>&gt;</span>
-                </div>
-            </div>
-
-            <div class="repository" id="scoreboard">
-                <div class="repo_decoheader">
-                    <span>&lt;</span>project<span>&gt;</span>
-                </div>
-                <div class="repo_body">
-                    <div id="winner_toast">🎉 Blue won! 🎊</div>
-                    <div class="repo_title">
-                        <a href="https://perpetuareality.github.io/Scoreboard/" title="See live on GitHub Pages"><h2>Scoreboard</h2></a>
-                    </div>
-                    <div class="repo_desc">
-                        <p>A simple scoreboard for card games.</p>
-                    </div>
-                    <div class="lang_title">
-                        <b>Language details</b> (hover over for more)<b>:</b>
-                    </div>
-                    <div class="lang_details"><noscript>[Javascript required to fetch details.]</noscript></div>
-                </div>
-                <div class="repo_decofooter">
-                    <span>&lt;/</span>project<span>&gt;</span>
-                </div>
-            </div>
-        </div>
-        <div id="lang_details_site"></div>
-    </div>
-
-    <script src="micro.js"></script>
-    <noscript><p>This website uses JavaScript code to create some of its effects. Please, to experience it to the fullest, turn on JavaScript on your browser's settings.</p></noscript>
 </body>
 </html>

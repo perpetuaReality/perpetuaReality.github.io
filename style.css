@@ -1,253 +1,106 @@
-﻿@charset "utf-8";
-/* CSS Document */
-@import url('https://fonts.googleapis.com/css?family=Fira+Mono');
-@import url('https://fonts.googleapis.com/css?family=Amaranth');
-@import url('https://fonts.googleapis.com/css?family=Lato');
-@import url("https://use.typekit.net/bmh0ger.css");
+@import url('https://fonts.googleapis.com/css2?family=Nova+Mono&display=swap');
+
+:root {
+    --main-colour: #acff31;
+}
+
+* {
+    font-family: 'Nova Mono', monospace;
+}
 
 body {
-    margin: 0px;
-    padding: 0px;
-    font-family: nudista-web, sans-serif;
+    background-color: rgb(10, 10, 10);
+    background-image: url("https://www.perpetuareality.com/img/bg-overlay-trianglescape.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-blend-mode: color-dodge;
+    color: var(--main-colour);
 }
 
-#github {
-    position: fixed;
-    text-align: center;
-    cursor: pointer;
-    top: 30px;
-    left: 50%;
-    font-size: medium;
-    -moz-transform: translateX(-50%);
-    -ms-transform: translateX(-50%);
-    -o-transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    padding: 7px;
-    color: rgba(220, 220, 220, 1);
-    background: rgba(36, 41, 46, 1);
-    border-radius: 3px;
-    border: 2px solid rgba(63, 68, 72, 1);
-    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    transition: color 0.5s, border-color 0.5s, background-color 0.5s;
-    z-index: 50;
+a, a:visited {
+    color: #e8ff68;
 }
 
-    #github:hover {
-        color: white;
-        background-color: rgba(63, 68, 72, 1);
-        border-color: white;
+a:hover, a:visited:hover {
+    color: #fffec5;
+}
+
+#logo {
+    animation: hue-rotate 10s infinite;
+    height: 180px;
+    width: auto;
+    margin-top: 10px;
+}
+
+#logo:hover {
+    animation-play-state: paused;
+    filter: invert(100%) !important;
+}
+
+@keyframes hue-rotate {
+    0% {
+        /* WHAT THE FUCK CSS */
+        filter: invert(82%) sepia(81%) saturate(464%) hue-rotate(27deg) brightness(105%) contrast(101%);
     }
-
-.github_btn {
-    text-align: center;
-    padding: 7px;
-    color: rgba(220, 220, 220, 1);
-    background: rgba(36, 41, 46, 1);
-    border-radius: 3px;
-    border: 2px solid rgba(63, 68, 72, 1);
-    box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    -webkit-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 2px 3px 0px rgba(0, 0, 0, 0.3);
-    transition: color 0.5s, border-color 0.5s, background-color 0.5s;
-    z-index: 50;
+    100% {
+        filter: invert(82%) sepia(81%) saturate(464%) hue-rotate(386deg) brightness(105%) contrast(101%);
+    }
 }
 
-    .github_btn:hover {
-        color: white;
-        background-color: rgba(63, 68, 72, 1);
-        border-color: white;
-    }
-    
-#container {
-    position: fixed;
-    background-color: rgb(6, 41, 56);
-    background-image: -moz-linear-gradient(top, rgb(6, 41, 56), rgb(0, 5, 13));
-    background-image: -o-linear-gradient(top, rgb(6, 41, 56), rgb(0, 5, 13));
-    background-image: -webkit-gradient(linear, top bottom, from(rgb(6, 41, 56)), to(rgb(0, 5, 13)));
-    background-image: linear-gradient(to bottom, rgb(6, 41, 56), rgb(0, 5, 13));
-    text-align: center;
+#wrapper {
+    margin-top: -30px;
+    min-width: 900px;
+    margin-right: 200px;
+}
+
+nav {
+    position: relative;
+    z-index: 1;
+}
+
+h1, h2, h3, h4 {
+    margin: 0%;
+}
+
+h1 {
+    margin-top: 15px;
+    border-bottom: double 1px var(--main-colour);
+}
+
+h3 {
+    font-weight: normal;
+}
+
+.h_underline {
+    margin-top: -10px;
+}
+
+.proj {
     display: flex;
-    -ms-flex-flow: column;
-    -webkit-flex-flow: column;
-    flex-flow: column;
-    width: 100%;
-    height: 100%;
+    flex-direction: row;
+    padding: 10px 0;
+    border-bottom: dashed 2px var(--main-colour);
 }
 
-#header {
-	margin-top: 15px;
-    width: 100%;
-    margin-bottom: -100px;
+.proj_image {
+    padding-right: 10px;
+    margin-right: 10px;
+    margin-bottom: -5px;
+    border-right: dashed 2px var(--main-colour);
 }
 
-    #header img {
-        height: 190px;
-        width: auto;        
-    }
-
-    #header h1 {
-        position: relative;
-        font-family: "fira-mono", monospace;
-        font-size: 42px;
-        margin-left: -13px;
-        top: -85px;
-        color: white;
-    }
-
-#caret {
-    margin-left: 3px;
-    -moz-animation: blink steps(2, start) 1.5s infinite;
-    -o-animation: blink steps(2, start) 1.5s infinite;
-    -webkit-animation: blink steps(2, start) 1.5s infinite;
-    animation: blink steps(2, start) 1.5s infinite;
+.proj_image img {
+    width: 256px;
+    border: solid 1px var(--main-colour);
 }
 
-@keyframes blink {
-    from {
-        visibility: visible;
-    }
-    to {
-        visibility: hidden;
-    }
-}
-
-#repositories {
-    display: -webkit-box;
-    display: -moz-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
+.missing{
+    height: 205px;
+    width: 256px;
+    border: solid 1px var(--main-colour);
     display: flex;
-    justify-content: space-around;
-    flex-flow: row wrap;
-    width: 100%;
-    bottom: 0px;
-    min-height: 0px;
-    overflow-y: auto;
-}
-
-.repository {
-    margin: 7px;
-}
-
-.repo_title a {
-    color: black;
-    -moz-text-decoration-line: underline;
-    text-decoration-line: underline;
-}
-
-    .repo_title a:hover {
-        text-decoration: none;
-    }
-
-.repo_body {
-    width: var(--repo_body_width);
-    height: 0px;
-    overflow: hidden;
-    animation: appear 1s forwards;
-    animation-delay: 0.5s;
-}
-
-@keyframes appear {
-    from {
-        height: 0px;
-    }
-    to {
-        height: 200px;
-    }
-}
-
-.repo_decoheader, .repo_decofooter {
-    font-size: 14px;
-    font-family: "fira-mono", monospace;
-    text-align: left;
-    padding-left: 15px;
-    color: rgba(104, 211, 234, 0.75);
-    background: rgba(0, 0, 0, 0.40);
-}
-
-    .repo_decoheader span, .repo_decofooter span {
-        color: rgba(118, 178, 191, 0.55);
-    }
-
-.repo_desc {
-    padding: 5px;
-    padding-top: 10px;
-}
-
-.lang_title {
-    padding-bottom: 5px;
-    font-size: large;
-}
-
-.lang_details{
-    width: var(--repo_body_width);
-    height: 20px;
-}
-
-#lang_details_site {
-    position: absolute;
-    width: 100%;
-    height: 5px;
-    bottom: 0px;
-    z-index: 60;
-}
-
-    .lang_bar, #lang_details_site .lang_bar {
-        height: 100%;
-        display: inline-block;
-        cursor: help;
-    }
-
-    #lang_details_site .lang_bar {
-        margin-bottom: 10px;
-    }
-
-#lang_tooltip {
-    position: fixed;
-    z-index: 30;
-    height: 20px;
-    width: 200px;
-    padding: 7px;
-    font-size: 16px;
-    line-height: 20px;
-    text-align: center;
-    -moz-border-radius: 5px;
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-    background-color: white;
-    box-shadow: rgba(0, 0, 0, 0.50) 0px 0px 5px;
-    visibility: hidden;
-}
-
-#lang_colourdot {
-    -moz-border-radius: 50%;
-    -webkit-border-radius: 50%;
-    border-radius: 50%;
-    width: 16px;
-    height: 16px;
-    display: inline-block;
-}
-
-noscript p {
-    position: fixed;
-    left: 10%;
-    right: 10%;
-    top: 0px;
-    margin: 0px;
-    padding: 3px;
-    padding-left: 40px;
-    padding-right: 40px;
-    text-align: center;
-    font-size: large;
-    font-family: sans-serif;
-    background-color: #ffcb00;
-    border: 3px #ff6500 solid;
-    border-top: none;
-    -moz-box-shadow: black 2px 2px;
-    -webkit-box-shadow: black 2px 2px;
-    box-shadow: rgba(0, 0, 0, 0.80) 0px 0px 5px;
-    z-index: 80;
+    align-items: center;
+    justify-content: center;
+    font-size: 100px;
 }
