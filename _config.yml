@@ -1,0 +1,12 @@
+collections:
+  games:
+    output: true
+  bots:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "authors"
+    values:
+      layout: "author"
