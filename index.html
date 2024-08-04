@@ -28,6 +28,25 @@
           {{ bot.output }}
         {% endfor %}
       </section>
+      {% if site.data.gadgets.size > 0 %}
+        <section>
+          <h1>Gadgets</h1>
+          {% for gadget in site.data.gadgets %}
+            <article class="gadget">
+              <h1>
+                >
+                <a href="{{ gadget.linkHref }}">{{ gadget.title }}&nbsp;>></a>
+                <span>
+                  {% for technology in gadget.stack %}
+                    <i class="devicon-{{ technology }}-plain" title="{{ technology }}"></i>
+                  {% endfor %}
+                </span>
+              </h1>
+              {{ gadget.description | markdownify }}
+            </article>
+          {% endfor %}
+        </section>
+      {% endif %}
     </main>
   </body>
 </html>

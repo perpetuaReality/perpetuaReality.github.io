@@ -61,7 +61,7 @@ section > h1 {
 }
 
 .project-body {
-    width: 100%
+    width: 100%;
 }
 
 .project-image {
@@ -108,6 +108,18 @@ section > h1 {
 
 .project .project-description {
     margin-top: .5rem;
+}
+
+.gadget {
+    padding: .5rem;
+}
+
+.gadget h1 {
+    font-size: 1.5rem;
+}
+
+.gadget p {
+    margin: 0;
 }
 
 .red {
