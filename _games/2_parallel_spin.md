@@ -3,10 +3,10 @@ title: "Parallel Spin"
 stack:
     - "javascript"
 links:
-    - text: "Ludum Dare"
-      href: "https://ldjam.com/events/ludum-dare/47/parallel-spin"
     - text: "Play"
       href: "https://perpetuareality.com/code-projects/parallel-spin/"
+    - text: "Ludum Dare"
+      href: "https://ldjam.com/events/ludum-dare/47/parallel-spin"
 ---
 ### Made for [Ludum Dare 47](https://ldjam.com/events/ludum-dare/47) in around 48 hours!
 

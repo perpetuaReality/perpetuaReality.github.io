@@ -3,10 +3,8 @@ title: "Project B-FER"
 stack:
     - "python"
 links:
-    - text: "Ludum Dare"
-      href: "https://ldjam.com/events/ludum-dare/47/parallel-spin"
-    - text: "Play"
-      href: "https://perpetuareality.com/code-projects/parallel-spin/"
+    - text: "Download"
+      href: "https://streamcope.itch.io/project-b-fer"
 ---
 ### Built in a few weeks for a livestream audience.<br>**Roles:** Producer, 2D art generalist, UI designer, programmer.<br>
 

@@ -3,10 +3,10 @@ title: "Super Boring"
 stack:
     - "godot"
 links:
+    - text: "Download"
+      href: "https://perpetuareality.itch.io/super-boring"
     - text: "Ludum Dare"
       href: "https://ldjam.com/events/ludum-dare/48/super-boring"
-    - text: "Itch.io"
-      href: "https://perpetuareality.itch.io/super-boring"
 ---
 ### Made for [Ludum Dare 48](https://ldjam.com/events/ludum-dare/48) in around 70 hours!
 

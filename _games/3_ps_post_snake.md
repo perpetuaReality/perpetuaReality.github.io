@@ -3,7 +3,7 @@ title: "PS: Post Snake"
 stack:
     - "unity"
 links:
-    - text: "Itch.io"
+    - text: "Download"
       href: "https://perpetuareality.itch.io/post-snake"
 ---
 ### Originally made for the [Extra Credits Game Jam 6](https://itch.io/jam/extra-credits-game-jam-6)! *(Did not finish)*
