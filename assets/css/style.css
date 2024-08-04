@@ -1,0 +1,136 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
+
+:root {
+    --background-colour: rgb(10, 10, 10);
+    --main-colour: #acff31;
+    --image-size: 15rem;
+    font-size: 20px;
+}
+
+* {
+    font-family: "M PLUS 1 Code", monospace;
+    font-optical-sizing: auto;
+
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--background-colour);
+    color: var(--main-colour);
+    padding: 0;
+    margin: 0;
+}
+
+a, a:visited {
+    color: #e8ff68;
+}
+
+a:hover, a:visited:hover {
+    color: #fffec5;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+main {
+    max-width: 50rem;
+    overflow: hidden;
+}
+
+section > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    padding-left: 1.5rem;
+    padding-top: .5rem;
+    border-bottom: solid 3px var(--main-colour);
+}
+
+.project-grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: calc(var(--image-size) * 3);
+}
+
+.project {
+    border-bottom: solid 1px var(--main-colour);
+    display: flex;
+    flex-direction: row;
+}
+
+.project-body {
+    width: 100%
+}
+
+.project-image {
+    display: flex;
+    align-items: center;
+    border-right: solid 1px var(--main-colour);
+}
+
+.project-image img {
+    width: var(--image-size);
+    aspect-ratio: 1;
+}
+
+.project-image, .project-body {
+    padding: .5rem;
+}
+
+.project h1 {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: double 4px var(--main-colour);
+}
+
+.project h2 {
+    font-size: 1.2rem;
+}
+
+.project h2 a {
+    text-wrap: nowrap;
+}
+
+.project h3 {
+    font-style: italic;
+    font-size: .9rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.project h3 em {
+    font-style: normal;
+}
+
+.project .project-description {
+    margin-top: .5rem;
+}
+
+.red {
+    color: rgb(255, 118, 118);
+}
+
+.blue {
+    color: rgb(118, 161, 255);
+}
+
+@media (max-width: 800px) {
+    .project {
+        flex-direction: column;
+    }
+
+    .project-image {
+        justify-content: center;
+        border-right: none;
+        padding-bottom: 0;
+        margin-bottom: -2rem;
+    }
+
+    .project h1 {
+        text-shadow: 3px 3px 0 var(--background-colour), 3px -3px 0 var(--background-colour), -3px 3px 0 var(--background-colour), -3px -3px 0 var(--background-colour), 3px 0px 0 var(--background-colour), 0px 3px 0 var(--background-colour), -3px 0px 0 var(--background-colour), 0px -3px 0 var(--background-colour);
+    }
+}

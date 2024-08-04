@@ -1,13 +1,33 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    {% for game in site.games %}
-        {{ game.output }}
-    {% endfor %}
-</body>
+    <title>{{ site.title }}</title>
+
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link
+      rel="stylesheet"
+      type='text/css'
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  </head>
+  <body>
+    <main>
+      <section>
+        <h1>Games</h1>
+        {% for game in site.games %}
+          {{ game.output }}
+        {% endfor %}
+      </section>
+      <section>
+        <h1>Bots & Websites</h1>
+        {% for bot in site.bots %}
+          {{ bot.output }}
+        {% endfor %}
+      </section>
+    </main>
+  </body>
 </html>

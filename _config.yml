@@ -1,3 +1,22 @@
+# Site settings
+# These are used to personalize your new site. If you look in the HTML files,
+# you will see them accessed via {{ site.title }}, {{ site.email }}, and so on.
+# You can create any custom variable you would like, and they will be accessible
+# in the templates via {{ site.myvariable }}.
+title: perpetuareality — Coding
+email: itsperp@perpetuareality.com
+description: >-
+  perpetuareality's coding project catalogue.
+domain: perpetuareality.github.io 
+url: https://perpetuareality.github.io # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: perpetuareality
+github_username:  perpetuareality
+
+# Build settings
+markdown: kramdown
+livereload: true
+
 collections:
   games:
     output: true
@@ -7,6 +26,26 @@ collections:
 defaults:
   - scope:
       path: ""
-      type: "authors"
+      type: "games"
     values:
-      layout: "author"
+      layout: "project"
+  - scope:
+      path: ""
+      type: "bots"
+    values:
+      layout: "project"
+
+# Exclude from processing.
+# The following items will not be processed, by default. Create a custom list
+# to override the default setting.
+# exclude:
+# - .sass-cache/
+# - .jekyll-cache/
+# - gemfiles/
+# - Gemfile
+# - Gemfile.lock
+# - node_modules/
+# - vendor/bundle/
+# - vendor/cache/
+# - vendor/gems/
+# - vendor/ruby/
