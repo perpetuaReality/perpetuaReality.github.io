@@ -15,38 +15,67 @@
       href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
   </head>
   <body>
-    <main>
-      <section>
-        <h1>Games</h1>
-        {% for game in site.games %}
-          {{ game.output }}
-        {% endfor %}
-      </section>
-      <section>
-        <h1>Bots & Websites</h1>
-        {% for bot in site.bots %}
-          {{ bot.output }}
-        {% endfor %}
-      </section>
-      {% if site.data.gadgets.size > 0 %}
+    <div id="wrapper">
+      <header>
+        <a href="https://www.perpetuareality.com">
+          {% include logo.html %}
+        </a>
+        <nav>
+          <h2>
+            <a href="https://github.com/perpetuaReality">Github</a>
+            ||
+            <a href="https://perpetuareality.itch.io">Itch.io</a>
+            ||
+            <a href="https://ldjam.com/users/perpetuareality/">Ludum Dare</a>
+          </h2>
+        </nav>
+      </header>
+      <main>
         <section>
-          <h1>Gadgets</h1>
-          {% for gadget in site.data.gadgets %}
-            <article class="gadget">
-              <h1>
-                >
-                <a href="{{ gadget.linkHref }}">{{ gadget.title }}&nbsp;>></a>
-                <span>
-                  {% for technology in gadget.stack %}
-                    <i class="devicon-{{ technology }}-plain" title="{{ technology }}"></i>
-                  {% endfor %}
-                </span>
-              </h1>
-              {{ gadget.description | markdownify }}
-            </article>
+          <h1>Games</h1>
+          {% for game in site.games %}
+            {{ game.output }}
           {% endfor %}
         </section>
-      {% endif %}
-    </main>
+        <section>
+          <h1>Bots & Websites</h1>
+          {% for bot in site.bots %}
+            {{ bot.output }}
+          {% endfor %}
+        </section>
+        {% if site.data.gadgets.size > 0 %}
+          <section>
+            <h1>Gadgets</h1>
+            {% for gadget in site.data.gadgets %}
+              <article class="gadget">
+                <h1>
+                  >
+                  <a href="{{ gadget.linkHref }}">{{ gadget.title }}&nbsp;>></a>
+                  <span>
+                    {% for technology in gadget.stack %}
+                      <i class="devicon-{{ technology }}-plain" title="{{ technology }}"></i>
+                    {% endfor %}
+                  </span>
+                </h1>
+                {{ gadget.description | markdownify }}
+              </article>
+            {% endfor %}
+          </section>
+        {% endif %}
+      </main>
+      <footer></footer>
+    </div>
   </body>
+
+  <script>
+    // https://danielcwilson.com/blog/2019/09/huedini/
+    if (window.CSS && CSS.registerProperty) {
+      CSS.registerProperty({
+        name: '--hueModifier',
+        syntax: '<number>',
+        inherits: false,
+        initialValue: 0
+      });
+    }
+  </script>
 </html>

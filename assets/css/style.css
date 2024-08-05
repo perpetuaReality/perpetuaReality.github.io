@@ -3,7 +3,9 @@
 :root {
     --background-colour: rgb(10, 10, 10);
     --main-colour: #acff31;
+    --logo-size: 31.25rem;
     --image-size: 15rem;
+    --title-outline: 3px 3px 0 var(--background-colour), 3px -3px 0 var(--background-colour), -3px 3px 0 var(--background-colour), -3px -3px 0 var(--background-colour), 3px 0px 0 var(--background-colour), 0px 3px 0 var(--background-colour), -3px 0px 0 var(--background-colour), 0px -3px 0 var(--background-colour);
     font-size: 20px;
 }
 
@@ -14,11 +16,53 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+}
+
 body {
     background-color: var(--background-colour);
     color: var(--main-colour);
     padding: 0;
     margin: 0;
+    height: 100%;
+}
+
+#wrapper {
+    height: 100%;
+}
+
+header {
+    position: relative;
+    height: 10rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#logo {
+    position: relative;
+    max-width: var(--logo-size);
+    width: 100%;
+    height: auto;
+    color: hsl(calc(var(--hueModifier) + 84), 100%, 59%);
+    animation: hue-rotate 10s linear infinite;
+}
+
+#logo:hover {
+    animation-play-state: paused;
+    color: white
+}
+
+@keyframes hue-rotate {
+  100% {
+    --hueModifier: 360;
+  }
+}
+
+nav {
+    position: absolute;
+    bottom: 1rem;
+    text-shadow: var(--title-outline);
 }
 
 a, a:visited {
@@ -34,7 +78,7 @@ h1, h2, h3, h4, h5 {
 }
 
 main {
-    max-width: 50rem;
+    max-width: 1200px;
     overflow: hidden;
 }
 
@@ -45,13 +89,6 @@ section > h1 {
     padding-left: 1.5rem;
     padding-top: .5rem;
     border-bottom: solid 3px var(--main-colour);
-}
-
-.project-grid {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    width: calc(var(--image-size) * 3);
 }
 
 .project {
@@ -143,6 +180,47 @@ section > h1 {
     }
 
     .project h1 {
-        text-shadow: 3px 3px 0 var(--background-colour), 3px -3px 0 var(--background-colour), -3px 3px 0 var(--background-colour), -3px -3px 0 var(--background-colour), 3px 0px 0 var(--background-colour), 0px 3px 0 var(--background-colour), -3px 0px 0 var(--background-colour), 0px -3px 0 var(--background-colour);
+        text-shadow: var(--title-outline);
+    }
+}
+
+@media (min-width: 1000px) {
+    
+}
+
+@media (max-width: 1200px) {
+    header {
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    header {
+        position: fixed;
+        margin: 0;
+        bottom: 1rem;
+        left: 1rem;
+        width: 10rem;
+        overflow: visible;
+        text-wrap: nowrap;
+        transform: rotate(-90deg);
+        transform-origin: center;
+    }
+
+    #logo {
+        width: auto;
+    }
+
+    main {
+        position: absolute;
+        top: 0;
+        left: 11rem;
     }
 }

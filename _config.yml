@@ -41,3 +41,6 @@ exclude:
 - vendor/cache/
 - vendor/gems/
 - vendor/ruby/
+- README.md
+- logo_raw.svg
+- CNAME
