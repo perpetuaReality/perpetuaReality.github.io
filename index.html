@@ -1,111 +1,80 @@
+---
+---
+
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>perpetuaReality - Coding</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <a href="https://www.perpetuareality.com" target="_blank"><img id="logo" src="https://www.perpetuareality.com/img/logo_black_line.png"/></a>
+    <title>{{ site.title }}</title>
 
+    <link rel="stylesheet" href="/assets/css/style.css">
+    <link
+      rel="stylesheet"
+      type='text/css'
+      href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css" />
+  </head>
+  <body>
     <div id="wrapper">
+      <header>
+        <a href="https://www.perpetuareality.com">
+          {% include logo.html %}
+        </a>
         <nav>
-            <h2>
-                <a href="https://github.com/perpetuaReality" target="_blank">Github</a> || 
-                <a href="https://perpetuareality.itch.io" target="_blank">Itch.io</a> || 
-                <a href="https://ldjam.com/users/perpetuareality/" target="_blank">Ludum Dare</a>
-            </h2>
+          <h2>
+            <a href="https://github.com/perpetuaReality">Github</a>
+            ||
+            <a href="https://perpetuareality.itch.io">Itch.io</a>
+            ||
+            <a href="https://ldjam.com/users/perpetuareality/">Ludum&nbsp;Dare</a>
+          </h2>
         </nav>
-
-
-
-        <h1>Games</h1>
-        <div class="proj">
-            <div class="proj_image">
-                <img src="https://static.jam.vg/content/9f4/73/z/401ce.png.480x384.fit.jpg"/>
-            </div>
-            <div>
-                <h2>Super Boring</h2>
-                <h3>
-                    <a href="https://ldjam.com/events/ludum-dare/48/super-boring" target="_blank">Ludum Dare &gt;&gt;</a> ||
-                    <a href="https://perpetuareality.itch.io/super-boring" target="_blank">Download &gt;&gt;</a>
-                </h3>
-                <i>Made for <a href="https://ldjam.com/events/ludum-dare/48" target="_blank">Ludum Dare 48</a> in around 70 hours!</i><br/>
-                The objective is very simple! Just bore as much as you can, as deep as you can! Oh, yeah, I mean “bore” as in “dig”. My bad.<br/>
-                Outrun the screen and the <b>DEATHWALL</b> at the top of it by digging as far down as you can!
-            </div>
-        </div>
-
-        <div class="proj">
-            <div class="proj_image">
-                <img src="https://static.jam.vg/content/9f4/73/z/3726b.png.480x384.fit.jpg"/>
-            </div>
-            <div>
-                <h2>Parallel Spin</h2>
-                <h3>
-                    <a href="https://ldjam.com/events/ludum-dare/47/parallel-spin" target="_blank">Ludum Dare &gt;&gt;</a> ||
-                    <a href="https://perpetuareality.com/code-projects/parallel-spin/" target="_blank">Play &gt;&gt;</a>
-                </h3>
-                <i>Made for <a href="https://ldjam.com/events/ludum-dare/47" target="_blank">Ludum Dare 47</a> in around 48 hours!</i><br/>
-                <span style="color: rgb(118, 161, 255);">Blue</span> is you. If you touch <span style="color: rgb(255, 118, 118);">Red</span>, you lose. You can only spin in preset levels, jump between levels, and change the way you spin.<br/>
-                Each movement you take spends energy. (Green gives you more energy! But use it wisely.)<br/>
-                How long can you stay in the game for?
-            </div>
-        </div>
-        
-        <div class="proj">
-            <div class="proj_image">
-                <img src="https://img.itch.zone/aW1nLzQxNTgyNzMucG5n/315x250%23c/Gys20R.png"/>
-            </div>
-            <div>
-                <h2>PS: Post Snake</h2>
-                <h3>
-                    <a href="https://perpetuareality.itch.io/post-snake" target="_blank">Itch.io &gt;&gt;</a>
-                </h3>
-                <i>Originally made for the <a href="https://itch.io/jam/extra-credits-game-jam-6" target="_blank">Extra Credits Game Jam 6</a>! (Did not finish)</i><br/>
-                Control your snake and weave your way in and around a little town while you deliver the mail to the people in these times of need. Time only passes when you move, so think ahead!
-            </div>
-        </div>
-        
-        <div class="proj">
-            <div class="proj_image">
-                <div class="missing">�</div>
-            </div>
-            <div>
-                <h2>PointSource</h2>
-                <h3>
-                    ???
-                </h3>
-                [ Coming soon ]
-            </div>
-        </div>
-
-
-
-        <h1>Bots</h1>
-        <div class="proj">
-            <div class="proj_image">
-                <img src="https://cdn.glitch.com/6c33b7d1-845a-40b8-a161-aa91ea03b579%2FPORTRAIT.png?1542147021136"/>
-            </div>
-            <div>
-                <h2>Courtney</h2>
-                <h3>
-                    <a href="https://courtney.glitch.me/" target="_blank">Project page &gt;&gt;</a> ||
-                    <a href="https://github.com/perpetuaReality/Courtney" target="_blank">Github repository &gt;&gt;</a>
-                </h3>
-                <i>Verified Discord bot!</i><br/>
-                [Development in Hiatus]<br/>
-                A Discord bot for tracking character HP! For use in roleplaying scenarios!
-            </div>
-        </div>
-
-
-
-        <h1>Gadgets</h1>
-        <h2>+ <a href="https://perpetuareality.com/code-projects/poggers/" target="_blank">Infinite Poggers &gt;&gt;</a></h2>
-        <h2>+ <a href="https://coding.perpetuareality.com/Scoreboardv2/" target="_blank">Scoreboard &gt;&gt;</a></h2>
-        <h2>+ <a href="https://flitter-tallier.glitch.me/" target="_blank">Flitter Tallier &gt;&gt;</a></h2>
+      </header>
+      <main>
+        <section>
+          <h1>Games</h1>
+          {% for game in site.games %}
+            {{ game.output }}
+          {% endfor %}
+        </section>
+        <section>
+          <h1>Bots & Websites</h1>
+          {% for bot in site.bots %}
+            {{ bot.output }}
+          {% endfor %}
+        </section>
+        {% if site.data.gadgets.size > 0 %}
+          <section>
+            <h1>Gadgets</h1>
+            {% for gadget in site.data.gadgets %}
+              <article class="gadget">
+                <h1>
+                  >
+                  <a href="{{ gadget.linkHref }}">{{ gadget.title }}&nbsp;>></a>
+                  <span>
+                    {% for technology in gadget.stack %}
+                      <i class="devicon-{{ technology }}-plain" title="{{ technology }}"></i>
+                    {% endfor %}
+                  </span>
+                </h1>
+                {{ gadget.description | markdownify }}
+              </article>
+            {% endfor %}
+          </section>
+        {% endif %}
+      </main>
     </div>
-</body>
+  </body>
+
+  <script>
+    // https://danielcwilson.com/blog/2019/09/huedini/
+    if (window.CSS && CSS.registerProperty) {
+      CSS.registerProperty({
+        name: '--hueModifier',
+        syntax: '<number>',
+        inherits: false,
+        initialValue: 0
+      });
+    }
+  </script>
 </html>

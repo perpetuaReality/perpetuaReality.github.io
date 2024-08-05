@@ -1,0 +1,46 @@
+title: perpetuareality — Coding
+email: itsperp@perpetuareality.com
+description: >-
+  perpetuareality's coding project catalogue.
+domain: perpetuareality.github.io 
+url: https://perpetuareality.github.io # the base hostname & protocol for your site, e.g. http://example.com
+baseurl: "" # the subpath of your site, e.g. /blog
+twitter_username: perpetuareality
+github_username:  perpetuareality
+
+# Build settings
+markdown: kramdown
+livereload: true
+
+collections:
+  games:
+    output: true
+  bots:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: "games"
+    values:
+      layout: "project"
+  - scope:
+      path: ""
+      type: "bots"
+    values:
+      layout: "project"
+
+exclude:
+- .sass-cache/
+- .jekyll-cache/
+- gemfiles/
+- Gemfile
+- Gemfile.lock
+- node_modules/
+- vendor/bundle/
+- vendor/cache/
+- vendor/gems/
+- vendor/ruby/
+- README.md
+- logo_raw.svg
+- CNAME

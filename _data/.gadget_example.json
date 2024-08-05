@@ -1,0 +1,9 @@
+{
+    "title": "Example Project",
+    "description": "An example project. With an **example bolded line**.",
+    "linkHref": "https://google.com",
+    "stack": [
+        "expressjs",
+        "nodejs"
+    ]
+}

@@ -1,0 +1,29 @@
+---
+---
+
+<article class="project">
+  <div class="project-image">
+    <img src="/assets/img/{{ page.collection }}/{{ page.slug }}.png" />
+  </div>
+  <div class="project-body">
+    <h1>
+      {{ page.title }}
+      <span>
+        {% for technology in page.stack %}
+          <i class="devicon-{{ technology }}-plain" title="{{ technology }}"></i>
+        {% endfor %}
+      </span>
+    </h1>
+    <h2>
+      {% for p_link in page.links %}
+        <a href="{{ p_link.href }}">{{ p_link.text }}&nbsp;>></a>
+        {% unless forloop.last %}
+          ||
+        {% endunless %}
+      {% endfor %}
+    </h2>
+    <div class="project-description">
+      {{ content }}
+    </div>
+  </div>
+</article>

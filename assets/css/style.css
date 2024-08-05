@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=M+PLUS+1+Code:wght@100..700&display=swap');
+
+:root {
+    --background-colour: rgb(10, 10, 10);
+    --main-colour: #acff31;
+    --logo-size: 31.25rem;
+    --image-size: 15rem;
+    --title-outline: 3px 3px 0 var(--background-colour), 3px -3px 0 var(--background-colour), -3px 3px 0 var(--background-colour), -3px -3px 0 var(--background-colour), 3px 0px 0 var(--background-colour), 0px 3px 0 var(--background-colour), -3px 0px 0 var(--background-colour), 0px -3px 0 var(--background-colour);
+    font-size: 20px;
+}
+
+* {
+    font-family: "M PLUS 1 Code", monospace;
+    font-optical-sizing: auto;
+
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    background-color: var(--background-colour);
+    color: var(--main-colour);
+    padding: 0;
+    margin: 0;
+    height: 100%;
+}
+
+#wrapper {
+    height: 100%;
+}
+
+header {
+    position: relative;
+    height: 10rem;
+    margin-left: 1rem;
+    margin-right: 1rem;
+}
+
+#logo {
+    position: relative;
+    max-width: var(--logo-size);
+    width: 100%;
+    height: auto;
+    color: hsl(calc(var(--hueModifier) + 84), 100%, 59%);
+    animation: hue-rotate 10s linear infinite;
+}
+
+#logo:hover {
+    animation-play-state: paused;
+    color: white
+}
+
+@keyframes hue-rotate {
+  100% {
+    --hueModifier: 360;
+  }
+}
+
+nav {
+    position: absolute;
+    bottom: 1rem;
+    text-shadow: var(--title-outline);
+}
+
+a, a:visited {
+    color: #e8ff68;
+}
+
+a:hover, a:visited:hover {
+    color: #fffec5;
+}
+
+h1, h2, h3, h4, h5 {
+    margin: 0;
+}
+
+main {
+    max-width: 1200px;
+    overflow: hidden;
+}
+
+section > h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    font-style: italic;
+    padding-left: 1.5rem;
+    padding-top: .5rem;
+    border-bottom: solid 3px var(--main-colour);
+}
+
+.project {
+    display: flex;
+    flex-direction: row;
+}
+
+section:not(:last-child) .project, section:last-child .project:not(:last-child) {
+    border-bottom: solid 1px var(--main-colour);
+}
+
+.project-body {
+    width: 100%;
+}
+
+.project-image {
+    display: flex;
+    align-items: center;
+    border-right: solid 1px var(--main-colour);
+}
+
+.project-image img {
+    width: var(--image-size);
+    aspect-ratio: 1;
+}
+
+.project-image, .project-body {
+    padding: .5rem;
+}
+
+.project h1 {
+    font-size: 1.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-bottom: double 4px var(--main-colour);
+}
+
+.project h2 {
+    font-size: 1.2rem;
+}
+
+.project h2 a {
+    text-wrap: nowrap;
+}
+
+.project h3 {
+    font-style: italic;
+    font-size: .9rem;
+    font-weight: 400;
+    margin-bottom: .5rem;
+}
+
+.project h3 em {
+    font-style: normal;
+}
+
+.project .project-description {
+    margin-top: .5rem;
+}
+
+.gadget {
+    padding: .5rem;
+}
+
+.gadget h1 {
+    font-size: 1.5rem;
+}
+
+.gadget p {
+    margin: 0;
+}
+
+.red {
+    color: rgb(255, 118, 118);
+}
+
+.blue {
+    color: rgb(118, 161, 255);
+}
+
+@media (max-width: 800px) {
+    :root {
+        font-size: 18px;
+    }
+
+    .project {
+        flex-direction: column;
+    }
+
+    .project-image {
+        justify-content: center;
+        border-right: none;
+        padding-bottom: 0;
+        margin-bottom: -2rem;
+    }
+
+    .project h1 {
+        text-shadow: var(--title-outline);
+    }
+}
+
+@media (max-width: 1200px) {
+    header {
+        margin-top: 1rem;
+        margin-bottom: -1rem;
+    }
+}
+
+@media (min-width: 1200px) {
+    #wrapper {
+        position: relative;
+        display: flex;
+        align-items: center;
+    }
+
+    header {
+        position: fixed;
+        margin: 0;
+        bottom: 1rem;
+        left: 1rem;
+        width: 10rem;
+        overflow: visible;
+        text-wrap: nowrap;
+        transform: rotate(-90deg);
+        transform-origin: center;
+    }
+
+    #logo {
+        width: auto;
+    }
+
+    main {
+        position: absolute;
+        top: 0;
+        left: 11rem;
+    }
+}
