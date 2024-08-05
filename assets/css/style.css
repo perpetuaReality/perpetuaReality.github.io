@@ -92,9 +92,12 @@ section > h1 {
 }
 
 .project {
-    border-bottom: solid 1px var(--main-colour);
     display: flex;
     flex-direction: row;
+}
+
+section:not(:last-child) .project, section:last-child .project:not(:last-child) {
+    border-bottom: solid 1px var(--main-colour);
 }
 
 .project-body {
@@ -168,6 +171,10 @@ section > h1 {
 }
 
 @media (max-width: 800px) {
+    :root {
+        font-size: 18px;
+    }
+
     .project {
         flex-direction: column;
     }
@@ -182,10 +189,6 @@ section > h1 {
     .project h1 {
         text-shadow: var(--title-outline);
     }
-}
-
-@media (min-width: 1000px) {
-    
 }
 
 @media (max-width: 1200px) {
